@@ -11,5 +11,5 @@ class Handler(BaseHandler):
     def on_handle(self, msg, *_):
         out = "(s/fdef {} :args {} :ret ...)".format(
             msg['name'], msg['arglists-str']
-        ))
+        )
         self.nvim.funcs.setreg('"', out)
